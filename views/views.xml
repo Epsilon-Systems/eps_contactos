@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="epsy_contacto.list">
+      <field name="name">epsy_contacto list</field>
+      <field name="model">epsy_contacto.epsy_contacto</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="epsy_contacto.action_window">
+      <field name="name">epsy_contacto window</field>
+      <field name="res_model">epsy_contacto.epsy_contacto</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="epsy_contacto.action_server">
+      <field name="name">epsy_contacto server</field>
+      <field name="model_id" ref="model_epsy_contacto_epsy_contacto"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="epsy_contacto" id="epsy_contacto.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="epsy_contacto.menu_1" parent="epsy_contacto.menu_root"/>
+    <menuitem name="Menu 2" id="epsy_contacto.menu_2" parent="epsy_contacto.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="epsy_contacto.menu_1_list" parent="epsy_contacto.menu_1"
+              action="epsy_contacto.action_window"/>
+    <menuitem name="Server to list" id="epsy_contacto" parent="epsy_contacto.menu_2"
+              action="epsy_contacto.action_server"/>
+-->
+  </data>
+</odoo>
