@@ -23,12 +23,19 @@ class ResPartner(models.Model):
                                string="Extranjero", help='Establece si una persona vive o nació en el extranjero')
     #Validación de documentos
     chk_vat = fields.Boolean(string='RFC')
-    chk_cur = fields.Boolean(string='RFC')
+    doc_vat = fields.Binary(string="RFC", help="Anexa el RFC en formato PDF")
+    chk_cur = fields.Boolean(string='CURP')
+    doc_vat = fields.Binary(string="CURP", help="Anexa el CURP en formato PDF")
     chk_ids = fields.Boolean(string='INE o Pasaporte')
+    doc_vat = fields.Binary(string="INE o Pasaporte", help="Anexa el INE o Pasaporte en formato PDF")
     chk_act = fields.Boolean(string='Acta Constitutiva')
+    doc_vat = fields.Binary(string="Acta Constitutiva", help="Anexa el Acta Constitutiva en formato PDF")
     chk_avi = fields.Boolean(string='Aviso de Incripción')
+    doc_vat = fields.Binary(string="Aviso de Incripción", help="Anexa el Aviso de Incripción en formato PDF")
     chk_est = fields.Boolean(string='Estructura Accionaria')
+    doc_vat = fields.Binary(string="Estructura Accionaria", help="Anexa el Estructura Accionaria en formato PDF")
     chk_org = fields.Boolean(string='Organigrama')
+    doc_vat = fields.Binary(string="Organigrama", help="Anexa el Organigrama en formato PDF")
 
     #Validación
     chk_gob = fields.Boolean(string='Gobierno')
